@@ -1,319 +1,196 @@
 <!DOCTYPE html>
-<html lang="zh">
-
+<html lang="zh-cn">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  	<meta property="og:title" content=" My New Hugo Site" />
-  	<meta property="og:site_name" content="My New Hugo Site" />
-  	<meta property="og:url" content="https://blog.yuandong.love/" />
-    
-    
-    <meta property="og:type" content="website" />
-    
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-  <title>
-     My New Hugo Site
-  </title>
-
-    <meta name="description" content="this is my description" />
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://blog.yuandong.love/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://blog.yuandong.love/images/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://blog.yuandong.love/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-    
-      
-      
-        <link href="/index.xml" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
-      
-    
-    <meta name="generator" content="Hugo 0.111.3">
+<meta name="author" content="olOwOlo" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
 
-    <link rel="canonical" href="https://blog.yuandong.love/" />
 
-     
+
+
+
+
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
+
+
+<link rel="canonical" href="https://blog.yuandong.love/" />
+  <link href="https://blog.yuandong.love/index.xml" rel="alternate" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
+  <link href="https://blog.yuandong.love/index.xml" rel="feed" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Even - A super concise theme for Hugo" />
+<meta property="og:description" content="Hugo theme even example site." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://blog.yuandong.love/" />
+<meta itemprop="name" content="Even - A super concise theme for Hugo">
+<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
+<meta name="twitter:description" content="Hugo theme even example site."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
 </head>
-<body class="nav-closed">
-<div id="particles-js"></div>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
   
 
 
- <div class="site-wrapper">
+</nav>
 
-
-
-<header class="main-header " style="background-image: url(https://blog.yuandong.love/images/user.jpg)">
-
-
-    
-
-    <nav class="main-nav overlay clearfix">
-        
-            <a class="blog-logo" href="https://blog.yuandong.love/"><img src="https://blog.yuandong.love/images/user.png" alt="Blog Logo" /></a>
-        
-        
-    </nav>
-<div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-              <a class="btn-bootstrap-2 title-scroll" href="#content">My New Hugo Site</a>
-          </h1>
-          <h2 class="page-description">this is my description</h2>
-        </div>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
 </div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
 
-<main id="content" class="content" role="main">
-    
-    
-    
-    
-    
-    
 
-    <div class="extra-pagination inner">
-        <nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
 </nav>
 
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="posts" class="posts">
+    </section>
+  
+  <nav class="pagination">
+    
+    
+  </nav>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://blog.yuandong.love/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
     </div>
-
-    
-        
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/posts/2023-04-23-%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">第二篇博客</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>测试</p>
-<p>测试</p>
-<p>测试1</p>
-<p><img src="/img/image-20230425172226636.png" alt="image-20230425172226636"></p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-            <img class="author-thumb" src="https://blog.yuandong.love/images/user.png" alt="Author image" nopin="nopin" />
-        
-        
-            syui
-        
-        
-        <time class="post-date" datetime="2023-04-23T23:30:25&#43;08:00">
-            23 Apr 2023
-        </time>
-    </footer>
-</article>
-
-    
-        
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/posts/%E5%88%86%E6%9E%90%E6%9C%AC%E6%AC%A12023-4-25%E8%8B%B1%E8%AF%AD%E5%85%AD%E7%BA%A7%E7%9A%84%E6%88%90%E7%BB%A9/">第一篇博客</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <h1 id="分析本次2023-4-25英语六级的成绩">分析本次(2023-4-25)英语六级的成绩</h1>
-<h2 id="历史六级分数">历史六级分数</h2>
-<h3 id="2020-12">2020-12</h3>
-<p><img src="/img/image-20230425130929511.png" alt="image-20230425130929511"></p>
-<h3 id="2021-6">2021-6</h3>
-<p><img src="/img/image-20230425131007217.png" alt="image-20230425131007217"></p>
-<h3 id="2023-3">2023-3</h3>
-<p><img src="/img/image-20230425131028298.png" alt="image-20230425131028298"></p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>满分</th>
-<th>2020-12</th>
-<th>2021-6</th>
-<th>2023-3</th>
-<th>及格分</th>
-<th>插值分</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>听力</strong></td>
-<td>249</td>
-<td>86</td>
-<td>59</td>
-<td><strong>90</strong></td>
-<td>150</td>
-<td>60</td>
-</tr>
-<tr>
-<td>阅读</td>
-<td>249</td>
-<td>131</td>
-<td>129</td>
-<td>160</td>
-<td>150</td>
-<td>-10</td>
-</tr>
-<tr>
-<td>写作和翻译</td>
-<td>212</td>
-<td>82</td>
-<td>98</td>
-<td>117</td>
-<td>130</td>
-<td>13</td>
-</tr>
-<tr>
-<td>总分</td>
-<td>710</td>
-<td>299</td>
-<td>286</td>
-<td>367</td>
-<td>430</td>
-<td>78</td>
-</tr>
-</tbody>
-</table>
-<h2 id="分析本次2023-3月六级不过的原因">分析本次(2023-3)月六级不过的原因</h2>
-<ol>
-<li>从分数上看，听力和写作翻译分数太低。</li>
-<li>从主观上来看，是因为自己准备不足，准备期间执行力太差，并且准备的太晚</li>
-<li>听力不行，在三门中，听力是离及格分最大的一门</li>
-</ol>
-<h2 id="接下来时间如何准备六级">接下来时间如何准备六级</h2>
-<p>据下次六级还有53天</p>
-<p>接下来以7天为一个周期安排学习任务</p>
-<p>初级目标：</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-            <img class="author-thumb" src="https://blog.yuandong.love/images/user.png" alt="Author image" nopin="nopin" />
-        
-        
-            syui
-        
-        
-        <time class="post-date" datetime="2020-04-23T23:30:25&#43;08:00">
-            23 Apr 2020
-        </time>
-    </footer>
-</article>
-
-    
-        
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/post/test/">sample</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p><a href="https://gohugo.io/documentation/">Hugo</a> is the world&rsquo;s fastest static website engine. It&rsquo;s written in Go (aka Golang) and developed by bep, <code>spf13</code> and friends.</p>
-<blockquote>
-<p>Below you will find some of the most common and helpful pages from our documentation.</p>
-</blockquote>
-<p><a href="https://gohugo.io/documentation/">https://gohugo.io/documentation/</a></p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-            <img class="author-thumb" src="https://blog.yuandong.love/images/user.png" alt="Author image" nopin="nopin" />
-        
-        
-            syui
-        
-        on
-            
-                <a href="https://blog.yuandong.love/tags/blog/">#blog</a>,
-            
-        
-        <time class="post-date" datetime="2017-01-01T00:00:00Z">
-            1 Jan 2017
-        </time>
-    </footer>
-</article>
-
-    
-        
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/post/test/">test post</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;hello world !!&#34;</span>
-</span></span></code></pre></div>
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-            <img class="author-thumb" src="https://blog.yuandong.love/images/user.png" alt="Author image" nopin="nopin" />
-        
-        
-            syui
-        
-        on
-            
-                <a href="https://blog.yuandong.love/tags/blog/">#blog</a>,
-            
-                <a href="https://blog.yuandong.love/tags/test/">#test</a>,
-            
-        
-        <time class="post-date" datetime="2016-01-01T00:00:00Z">
-            1 Jan 2016
-        </time>
-    </footer>
-</article>
-
-    
-
-    <nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
 
 
-</main>
 
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">My New Hugo Site</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
-    </div>
-    <script type="text/javascript" src="https://blog.yuandong.love/js/jquery.js"></script>
-    <script type="text/javascript" src="https://blog.yuandong.love/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://blog.yuandong.love/js/index.js"></script>
-    <script src="https://blog.yuandong.love/js/particles.min.js"></script>
-    <script src="https://blog.yuandong.love/js/particles.js"></script>  
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
 
 </body>
 </html>
-
