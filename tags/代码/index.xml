@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>代码 on 王小帅的博客</title>
+    <link>https://blog.yuandong.love/tags/%E4%BB%A3%E7%A0%81/</link>
+    <description>Recent content in 代码 on 王小帅的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 26 Apr 2023 11:27:25 +0800</lastBuildDate><atom:link href="https://blog.yuandong.love/tags/%E4%BB%A3%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>md&#43;gihub&#43;hugo自动部署</title>
+      <link>https://blog.yuandong.love/post/2023-04-25-md&#43;gihub&#43;hugo%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 26 Apr 2023 11:27:25 +0800</pubDate>
+      
+      <guid>https://blog.yuandong.love/post/2023-04-25-md&#43;gihub&#43;hugo%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</guid>
+      <description>在markdown写完之后，需要将里面的图片移动到hugo下面，并且还要将md里面的图片地址重新改一下，然后执行hugo和git命令，这一套</description>
+    </item>
+    
+  </channel>
+</rss>

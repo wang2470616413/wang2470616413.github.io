@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>md&#43;gihub&#43;hugo自动部署 - 王小帅的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="王小帅" /><meta name="description" content="在markdown写完之后，需要将里面的图片移动到hugo下面，并且还要将md里面的图片地址重新改一下，然后执行hugo和git命令，这一套" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
+
+
+<link rel="canonical" href="https://blog.yuandong.love/post/2023-04-25-md&#43;gihub&#43;hugo%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="md&#43;gihub&#43;hugo自动部署" />
+<meta property="og:description" content="在markdown写完之后，需要将里面的图片移动到hugo下面，并且还要将md里面的图片地址重新改一下，然后执行hugo和git命令，这一套" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.yuandong.love/post/2023-04-25-md&#43;gihub&#43;hugo%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-04-26T11:27:25+08:00" />
+<meta property="article:modified_time" content="2023-04-26T11:27:25+08:00" />
+<meta itemprop="name" content="md&#43;gihub&#43;hugo自动部署">
+<meta itemprop="description" content="在markdown写完之后，需要将里面的图片移动到hugo下面，并且还要将md里面的图片地址重新改一下，然后执行hugo和git命令，这一套"><meta itemprop="datePublished" content="2023-04-26T11:27:25+08:00" />
+<meta itemprop="dateModified" content="2023-04-26T11:27:25+08:00" />
+<meta itemprop="wordCount" content="463">
+<meta itemprop="keywords" content="博客,代码," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="md&#43;gihub&#43;hugo自动部署"/>
+<meta name="twitter:description" content="在markdown写完之后，需要将里面的图片移动到hugo下面，并且还要将md里面的图片地址重新改一下，然后执行hugo和git命令，这一套"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">王小帅的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">王小帅的博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">md&#43;gihub&#43;hugo自动部署</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-04-26 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>在markdown写完之后，需要将里面的图片移动到hugo下面，并且还要将md里面的图片地址重新改一下，然后执行hugo和git命令，这一套流程下太麻烦，于是写了个脚本自动处理</p>
+<p>​</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">argparse</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">shutil</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">subprocess</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 读取文件内容</span>
+</span></span><span class="line"><span class="cl">    <span class="n">replaeTxt</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 对每一行进行处理</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\!\[.*\]\(.*\.png\)&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 输出匹配结果</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="ow">and</span> <span class="s2">&#34;/&#34;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">line</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">absFile</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;](&#34;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">][:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">line</span> <span class="o">=</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;](&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s2">&#34;](&#34;</span><span class="o">+</span> <span class="s2">&#34;/img&#34;</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span> <span class="o">+</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\\</span><span class="s2">&#34;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">absFile</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;](&#34;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;](&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s2">&#34;](&#34;</span><span class="o">+</span> <span class="s2">&#34;/img&#34;</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span> <span class="o">+</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\\</span><span class="s2">&#34;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">absFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">absFile</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">newFilePath</span><span class="p">,</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">absFile</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">replaeTxt</span> <span class="o">+=</span> <span class="n">line</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">replaeTxt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;D:\Document\wordProjects\hugo\Sites\blog\content\post&#34;</span><span class="p">,</span><span class="n">args</span><span class="o">.</span><span class="n">file</span><span class="p">),</span> <span class="s2">&#34;w&#34;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">replaeTxt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">cmdList</span><span class="p">(</span><span class="n">commandList</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">cmd</span> <span class="ow">in</span> <span class="n">commandList</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">result</span> <span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">cwd</span><span class="o">=</span><span class="n">cmd</span><span class="p">[</span><span class="s1">&#39;path&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 解析命令行参数</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--file&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;file name&#39;</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="s2">&#34;分析六级不过的原因以及接下来时间如何准备六级.md&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--newFilePath&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;new text&#39;</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;D:\Document\wordProjects\hugo\Sites\blog\static\img&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fun</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;请输入commit的内容&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">commitStr</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="n">commandList</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;hugo&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;D:\Document\wordProjects\hugo\Sites\blog&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;git add -A&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;D:\Document\wordProjects\hugo\Sites\blog\public&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;git commit -m </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">commitStr</span><span class="p">),</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;D:\Document\wordProjects\hugo\Sites\blog\public&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;git push&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;D:\Document\wordProjects\hugo\Sites\blog\public&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cmdList</span><span class="p">(</span><span class="n">commandList</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>把这个脚本放在和md文件同级的目录下，然后执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">python .<span class="se">\t</span>est1.py --file <span class="s1">&#39;.\分析本次(2023-4-25)英语六级的成绩.md&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>即可</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">王小帅</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-04-26
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+          <a href="/tags/%E4%BB%A3%E7%A0%81/">代码</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/%E5%88%86%E6%9E%90%E6%9C%AC%E6%AC%A12023-4-25%E8%8B%B1%E8%AF%AD%E5%85%AD%E7%BA%A7%E7%9A%84%E6%88%90%E7%BB%A9/">
+            <span class="next-text nav-default">第一篇博客</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="wang2470616413/wang2470616413.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://blog.yuandong.love/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>王小帅</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

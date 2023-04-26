@@ -6,7 +6,7 @@
     <description>Recent content on 王小帅的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 25 Apr 2023 10:30:25 +0800</lastBuildDate><atom:link href="https://blog.yuandong.love/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Apr 2023 11:27:25 +0800</lastBuildDate><atom:link href="https://blog.yuandong.love/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Theme preview</title>
       <link>https://blog.yuandong.love/posts/even-preview/</link>
@@ -25,6 +25,15 @@
       <description>Hugo is a static site engine written in Go.
 It makes use of a variety of open source projects including:
 Cobra Viper J Walter Weatherman Cast Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>md&#43;gihub&#43;hugo自动部署</title>
+      <link>https://blog.yuandong.love/post/2023-04-25-md&#43;gihub&#43;hugo%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 26 Apr 2023 11:27:25 +0800</pubDate>
+      
+      <guid>https://blog.yuandong.love/post/2023-04-25-md&#43;gihub&#43;hugo%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</guid>
+      <description>在markdown写完之后，需要将里面的图片移动到hugo下面，并且还要将md里面的图片地址重新改一下，然后执行hugo和git命令，这一套</description>
     </item>
     
     <item>
